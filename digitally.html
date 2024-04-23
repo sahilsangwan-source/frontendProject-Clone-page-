@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css"/>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div id="nav">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAilBMVEUNDQ319vgAAAD///8RERH4+fv9/f/My8wFBQXk5OQjICG8vLyHh4nQ0NJ8fH3g3+CUlJU6OjkeHh5KSkpTU1RBQUH29frFxcVlZWWbm5srKyuAgIBycnLY2NmxsbFYWFjs7O2oqKhFRUWPj49QUE8nJydiYmJzc3M0NDS+vsCEhYUaFxe0tbWZmZvZH6PXAAAIVElEQVR4nO2da3uiOhRGy45EOK2X1la8oSid1rbO//97J2CrEEjeWLHODHt96MzzCJuwCCFAyL7p3DBWOjesCMCKIKwIwoogrAjCiiCsCMKKIKwIwoogrAjCiiCsCMKKIKwIwoogrAjCiiCsCMKKIKwIwoogrAjy1yuiEieslf0TuKzzVyvKdnAzSafLZRQtl9O7yZOjJhoN+2o5uhm+LVdoBaSIEKfsjnHFyo8BDqhqwGgae1IIKaXvqz9SSK833DiUiUIxoZugkwhFCpYHimg3MBJ3l9PJzNESdcsrh+vCatQPy78m/0FHRHehkL6n4UsxmKMi0YvoZZVoKZL5Wogn++JIUVcdIDPquIW7FxdJFGpr3hYV3YnyrwIpCug9ERU/4/E4sySShb0a0lqo8yz48MSW1P/XZyqqlEM/bKpEKZakFJVXKyuS5aBIEX3EVUHF9SNriWiXnWfqwLypv89id2FF+8P2ghw1qog2ibaCjgz/s5SIhkoOUZKL6l+8Fn1KmqLTv0FFdO+BUo09P+mYSxQ8+KI7HMhB1iBFAhzfZhSpnQKHokFFASUuVbtnq0YTdSEU3kZVolFiWzCjKUUeuHY2qIjewFn2GcNWsamTTt/z9gpfkRtT5ImRtYVsTBGthFuB/K2lQIFb5yujOUV+/EOKYn/sVCC5dO7XWmlOkWdt9hpTpC7Snpsiz79xrCd2GlTkd39E0U66KoK3Fm40qMgTH5bTozFFSXXDBmXWi5o7jSqam4vUlKLsPKu6yO5Gawrqu7bIVppUVNptPVBTitLKFd+Xb/PJ5D2q3tPaL7KunK5of6NZq2jwA4p2+qZl/LB/gLJVmyifcvLuKorCMFGEiS+qHbikY25CmlI00AqkjstnJCK9VfJBl9+NExWpFnBP59dLVGkVxL2xSI0p0m8+xPGpobp11/RF11G0/yFQ3dNKsyAeL69I22Tx5A46+o/W3qwr31WU/xjrR3RxaUXBL/08W1oKZGscCzHB72cp6msVW7xfXNFMX7LYPaToG4o6D+AFx1mKRlp55fDSiuheX7JfjHN7uiJ1nPv2pc5SNCsX9/qKdn+aouDhT1PkWouCwvsoVlRHMBsd2KSsqC7KnTgiWVFdlEWveyBmRbVhCixYEYCba+vO5+vMbY+5MljRIxo+03pF+EUaK4KwIggrgrAiCCuCsCIIK4KwIggrgrAiCCuCtFiR69cUbVUUED097lnN7I5aqog6S+/w9Nr8gjSnnYpoFgo/jvZ0J6yoJkwselvXD8ZaqYgmYuD+JV07Fa3RI/0i7VSUf2zlSjsVDeGXTwXaqWgr/GfnD3FbqSirRmL9+LRnAz6hbKeiG/otjwMf+FVjfaCndfz1sbd5hGZOWxWVRj7YDLRYkTusCMKKIKwIwoogrAjCiiCsCMKKIKwIwoogrAjSTkXFL4n4kVodwWz1eITfxtZFKX5JxI/UaqPciUHviwF/A1IX5U4s+EsipOiwGn9JVB+lfxwNQnNWVBdlIQ4zINDaMgFDTisVBR8i+ewNBZQIvujXhemJ3eeUhWvR8LyO/4qikRS32STLs50QG1ZUG+dVCD/uxT7sOLZWkQoU5a+su3gusbYqyt7GjlbPLhOat1aR+xyqLVbkCiuCsCIIK4KwIggrgrAiCCuCsCIIK4KwIkg7FVnykFVppSLazPtH5ucm//onFaWlt7H8bWxNlOdhEfBUrZWKuC3Cik6CFUFYEYQVQc5S9C/Mmo5p/dz7mGYzOJjfbFYUFbOYVDKKGHNkVTI4lI7KtzI4QJrNA2KeIEBPlFMqPS31QKYXXNU8IMWkr5WNXClVSrBH9bim2hG1ZpOp6CxYqPnRGEfbpB8eFw0edH9XzSbT2S66J+Uk0s4BTx5znNBWzyUUmuPYchLp5+tVchLlG85Sf/l1OdsSc/Kayrk09r7yAxP19KNvHvJTqXBK51ecQC+PvEZmKyvWUQbv2hEe+8lqf4f0UEmR5ZtzdVbzo/mDp32cUSXjrn1gzIXe6VspZTfXA+nZXseeL+Npmg7fPL1J8ywDNOm9Jk73d5pOezVZ9iyjq4hmq8Vq1vzIECvWoadUE8iXQlR3TLm2tGmbulyNhjiexdB9N8vw6EfmTV1EkTnJ3kmRrN0ZCp3LY2mt8yTWcTRQamES95/KG5uNb3ZM92rP90rrynlpjGOs1fQsRPSxbwebHutoLZF1ZqlKCjwLv2y18ckxhbXC2BrTQCw/R8wuBeo8/VQO6xMOP7hUOxfJHEddO8LCuOvnRh/M2koEHgFXHp0YsTVpWUPrWo2MyZBpejyX1f/NN985jSnCCaOzu17YHI1tCR8PO+VQnrGt53B7TElOEwEypjelSDh0ZFXJHALhFO8UO5yyYme54l9BkY8qa05APbhvwuG2ij5CWCrZs/Sc6fexvD9zovliAFq8TwKqpuMtMs7qkMM9AXViYcx//mXadlV8LDXXzb5Hq+pRfdR44TwbKaU1eZ0PSO/VLVBA67rM54dCydRuWl30vz6TuT37oq/ufAxImXX7k266dZ+uVQWc3UqDJOnvPpwj0aZbf8+h4shoi1r8kRRRNg/vVnUdwSt9qGh4a2I9TfurLX6ZqUek+3UipZZLXQlPplunG+9DnNEy0S1lBy5ZbnCRaOFnsznH6i+cShUo0l/tVnDfp2LI52EUFgcehNHQ6XMMPc5q2k1KcbrTR7c46jY2XyNCdQgrugy53V+rRf/1tf/6Mvuu7H2c2ctrzmlx1IKT/qSBz2QuSXBOVSzgOrFF3fYbeKTGsCIHWBGEFUFYEYQVQVgRhBVBWBGEFUFYEYQVQVgRhBVBWBGEFUFYEYQVQVgRpPM/vbre3IdxwbkAAAAASUVORK5CYII="/>
+        <div id="nav-part2">
+            <h4>Home</h4>
+            <h4>Work</h4>
+            <h4>Studio</h4>
+            <h4>Contact</h4>
+        </div>
+        <div id="nav-part3">
+            <div id="circle"></div>
+        </div>
+    </div>
+    <div id="purple"></div>
+    <div class="main">
+        <div class="page1">
+            
+            <h1>Digitally crafted</h1>
+            <h2>brand experiences</h2>
+            <video autoplay muted loop src="https://media.istockphoto.com/id/485784548/video/team-of-architects-brainstorming-the-design-solutions.mp4?s=mp4-640x640-is&k=20&c=JDNzG8vIeu9QbMUEmXxO8LNdSiD3CK1UFxK0kyG3Szc="></video>
+        </div>
+        <div class="page2">
+            <h1>We are Duo Studio</h1>
+           <div class="page2-container">
+            <div class="page2-left">
+                <h2>
+                    A CREATIVE COLLECTIVE MADE TO UNLOCK YOUR BRAND'S POTENTIAL
+                </h2>
+            </div>
+            <div class="page2-right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum minima voluptates ullam quas quisquam obcaecati explicabo culpa molestias quae unde temporibus, facere quam consequatur nulla hic quos fugit distinctio!</p>
+                <button>About us</button>
+            </div>
+           </div>
+        </div>
+        <div class="page3">
+            <h1>Selcted works</h1>
+            <div class="page3-part1">
+                <img src="https://plus.unsplash.com/premium_photo-1676893374848-220c6eaad411?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D"/>
+                <video  autoplay muted loop src="https://cdn.pixabay.com/vimeo/918944243/man-202753.mp4?width=360&hash=e6c7733ddf61580cd63f077e7bff6bd4d7f52851"></video>
+            </div>
+            <div class="page3-part2">
+                <video  autoplay muted loop src="https://cdn.pixabay.com/vimeo/148614385/concert-1630.mp4?width=640&hash=09acc4d99b86f5fcf32c8ae602a8d45fcb59bc10"></video>
+                <img src="https://images.unsplash.com/photo-1707108278001-c552993894b9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D"/>
+            </div>
+            <div class="page3-part3">
+                <h1>View all projects</h1>
+                <div class="circle2"><h1>DISCOVER</h1></div>
+            </div>
+        </div>
+        <div class="page4">
+            <div class="elem">
+                <img  src="https://images.unsplash.com/photo-1711064644398-f9f1dbc6b72a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4Mnx8fGVufDB8fHx8fA%3D%3D"/>
+                <div class="text-div">
+                    <h1>Strategy</h1>
+                    <h1>Strategy</h1>
+                </div>
+                <img src="https://images.unsplash.com/photo-1710664416929-c9a774af6f3a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1N3x8fGVufDB8fHx8fA%3D%3D"/>
+            </div> 
+            <div class="elem">
+                <img  src="https://images.unsplash.com/photo-1708986662906-2f3030e2dab2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2MHxxUFlzRHp2Sk9ZY3x8ZW58MHx8fHx8"/>
+                <div class="text-div">
+                    <h1>Ideas</h1>
+                    <h1>Ideas</h1>
+                </div>
+                <img src="https://images.unsplash.com/photo-1708616748538-bdd66d6a9e25?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2MnxxUFlzRHp2Sk9ZY3x8ZW58MHx8fHx8"/>
+            </div> 
+            <div class="elem">
+                <img  src="https://images.unsplash.com/photo-1709575407844-be8bde65fedf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDkwfHFQWXNEenZKT1ljfHxlbnwwfHx8fHw%3D"/>
+                <div class="text-div">
+                    <h1>Inovation</h1>
+                    <h1>Inovation</h1>
+                </div>
+                <img src="https://images.unsplash.com/photo-1614557515102-b05d9e4995a7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1M3xxUFlzRHp2Sk9ZY3x8ZW58MHx8fHx8"/>
+            </div> 
+        </div>
+        <div class="page5">
+            <h2>Mentions clients</h2>
+            <div class="box" data-image="https://images.unsplash.com/photo-1602562887763-851fa56061e3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D">
+                <h3>Verizon</h3>
+                <h4>2021</h4>
+            </div>
+            <div class="box" data-image="https://images.unsplash.com/photo-1709108615029-4055f1f7bd80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDk3fHRvd0paRnNrcEdnfHxlbnwwfHx8fHw%3D">
+                <h3>Verizon</h3>
+                <h4>2021</h4>
+            </div>
+            <div class="box" data-image="https://images.unsplash.com/photo-1708918991506-0609d499bb79?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwNXx0b3dKWkZza3BHZ3x8ZW58MHx8fHx8">
+                <h3>Verizon</h3>
+                <h4>2021</h4>
+            </div>
+            <div class="box" data-image="https://images.unsplash.com/photo-1572708609022-9689cecb4218?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0N3x0b3dKWkZza3BHZ3x8ZW58MHx8fHx8">
+                <h3>Verizon</h3>
+                <h4>2021</h4>
+            </div>
+            <div class="box" data-image="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3Nnx0b3dKWkZza3BHZ3x8ZW58MHx8fHx8">
+                <h3>Verizon</h3>
+                <h4>2021</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script4.js"></script>
+</body>
+</html>
